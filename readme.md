@@ -8,7 +8,7 @@ _____   __ ___/  |_  ____               _____   ____  __ __  _____/  |_  _______
 
 Auto-Mounter is a simple bash script allowing you to mount specified folders via NFS or SMB.
 
-Executed manualy or with systemd service and timer, it mounts all folders specified in the bash script and periodicly checks if folders are mounted and remounts them.
+Executed manualy or with systemd service and timer, it mounts all folders specified in the bash script and periodically checks if folders are mounted and remounts them.
 
 Originaly created in conjunction with another script "mbackuper" as easy way to mount folders in backup event on my server without leaving them mounted all the time and open for exploit.
 
