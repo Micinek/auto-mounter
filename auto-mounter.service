@@ -1,0 +1,11 @@
+[Unit]
+Description=Auto - Mounter service
+After=multi-user.target
+
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/auto-mounter.sh
+
+[Install]
+WantedBy=multi-user.target
