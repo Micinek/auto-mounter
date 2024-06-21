@@ -14,6 +14,10 @@ Originaly created in conjunction with another script "mbackuper" as easy way to 
 
 #
 
+##Please first edit the auto-mounter.sh file according to your needs, every line you need to change is commented and explained, with examples.
+
+#
+
 ### If you want to install the script as service, just run the  "install.sh".
 
 The script will copy the shell script to /usr/local/bin and service files to /etc/systemd/system, then enables the service and timer. Print out status of services.
