@@ -1,5 +1,6 @@
 [Unit]
 Description=Auto - Mounter service
+Before=docker.service
 After=multi-user.target
 
 

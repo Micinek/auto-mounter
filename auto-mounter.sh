@@ -1,30 +1,7 @@
 #!/bin/bash
 
-#--------- EDIT HERE --------------------------------------------------------------#
-#---------------------------- EDIT HERE -------------------------------------------#
-#---------------------------------------------- EDIT HERE -------------------------#
-#----------------------------------------------------------------- EDIT HERE ------#
-# Chose your mount type NFS or SMB, if using SMB fill "SMB login information", if not, leave as is.
-MOUNT_TYPE="SMB"
-
-# Replace with IP or hostname of your remote ( source of backups )
-server="192.168.99.99"
-
-# SMB login information   Only fill if you going to use SMB mounting
-username="your_login"
-password="your_password"
-domain=""  # Optional, only if your environment uses domain authentication
-
-# Array of NFS prefixes and their corresponding folders, allowing multiple volumes to be mounted
-declare -A nfs_mounts=(
-    ["volume1"]="media/movies media/tvseries" # You can also mount folders inside of mountpoint (if allowed by NFS server)
-    ["volume2"]="downloads"
-)
-
-# Mount point prefix - parent local folder, all mountpoints will be mounted inside.
-local_mount_point_prefix="/synology"
-
-
+# Source configuration file
+source /etc/auto-mounter/auto-mounter.conf
 
 #--- DO NOT EDIT BELOW ------------------------------------------------------------#
 #---------------------- DO NOT EDIT BELOW -----------------------------------------#
@@ -80,9 +57,9 @@ clear && print_logo
 
 
 # Loop through each NFS prefix in the array
-for nfs_prefix in "${!nfs_mounts[@]}"; do
+for nfs_prefix in "${!remote_mounts[@]}"; do
   # Get the folders corresponding to the current NFS prefix
-  folders="${nfs_mounts[$nfs_prefix]}"
+  folders="${remote_mounts[$nfs_prefix]}"
 
   # Loop through each folder
   for folder in $folders; do

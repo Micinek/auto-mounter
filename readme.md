@@ -16,10 +16,10 @@ Originaly created in conjunction with another script "mbackuper" as easy way to 
 
 ### If you want to install the script as service, just run the  "install.sh".
 
-The script will copy the shell script to /usr/local/bin and service files to /etc/systemd/system, then enables the service and timer. Print out status of services.
+The script will copy the shell script and config file to /etc/auto-mounter/ and service files to /etc/systemd/system, then enables the service and timer. Run and print out status of service.
 
 
 #
 #
 
-Made on Ubuntu 22.04 LTS. Script will check for SUDO, and install it if missing, also based on your choice of mount method, it will attempt to install tools to be able to mount ( nfs-common or cifs-utils ).
+Tested on Ubuntu 22.04 LTS and 24.04 LTS. Script will check for SUDO, and install it if missing (not likely for Ubuntu), also based on your choice of mount method, it will attempt to install tools to be able to mount ( nfs-common or cifs-utils ).
