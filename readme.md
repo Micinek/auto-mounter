@@ -14,7 +14,7 @@ Originaly created in conjunction with another script "mbackuper" as easy way to 
 
 #
 
-## Please first edit the auto-mounter.sh file according to your needs, every line you need to change is commented and explained, with examples.
+## Please first edit the auto-mounter.conf file according to your needs, every line you need to change is commented and explained, with examples.
 
 #
 
