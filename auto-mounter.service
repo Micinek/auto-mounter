@@ -4,7 +4,7 @@ After=multi-user.target
 
 
 [Service]
-Type=oneshot
+Type=simple
 ExecStart=/etc/auto-mounter/auto-mounter.sh
 
 [Install]
