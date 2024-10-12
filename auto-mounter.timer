@@ -3,7 +3,7 @@ Description=Run Auto - Mounter Script Every 5 Minutes
 After=multi-user.target
 
 [Timer]
-OnBootSec=yes
+OnBootSec=5
 OnUnitActiveSec=5min
 
 [Install]
